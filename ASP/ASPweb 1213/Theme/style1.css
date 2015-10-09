@@ -1,0 +1,43 @@
+*{ margin:0px auto}
+body{background:#fff url(img/def_bg.jpg) repeat-x;;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;color:#727272;line-height:22px;}
+/* 链接 */
+a{color:#727272;text-decoration:none;}a:visited{color:#727272;text-decoration:none;}a:hover{color:#f00;text-decoration: underline}
+a.link1{color:#fff;text-decoration:none;}a.link1:visited{color:#fff;text-decoration:none;}a.link1:hover{color:#fff;text-decoration:underline;}
+a.link2{color:#f00;text-decoration:none;}a.link2:visited{color:#f00;text-decoration:none;}a.link2:hover{color:#f00;text-decoration:underline;}
+
+/* 文字 */
+.font1{ color:fff;}
+.font2{ color:#f00; font-size:14px;}
+
+/* 其它*/
+
+/* 框架 */
+.top{ width:950px;height:104px;text-align:left; background:url(img/logo_right1.jpg) no-repeat 792px 0px;}
+
+
+/* 背景 */
+
+
+#time
+{
+	color:red;
+	
+	}
+
+
+
+*/*/
+div ul{
+	height:51px;
+	width:950px;
+}
+div ul li{ 
+	width:115px; 
+	height:37px;
+	font-size:14px;
+	border-left:#000 1px dotted;
+	padding-top:16px;
+	float:left;
+	text-align:center;
+
+}
