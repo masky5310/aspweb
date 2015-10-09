@@ -1,0 +1,42 @@
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+
+Function GetIEVersion
+	Dim strName, strVersion
+	strName = Request.ServerVariables("HTTP_USER_AGENT")
+	iPos = Instr(strName,"MSIE")
+	if iPos > 0 then
+		strVersion = Trim(Mid(strName,iPos+5,1))
+		If strVersion >= 4 then
+			GetIEVersion = strVersion
+		else
+			GetIEVersion = 0
+		end if
+	else
+		GetIEVersion = 0
+	end if
+End Function
+
+Sub Session_OnStart
+    Session("DateModif")        = "25/06/2010"
+    Session("VersionServeur")   = "0.01"
+    Session("MailSA")           = "lyn.ma@hotmail.com"
+    Application("CompteurUsers") = Application("CompteurUsers") + 1
+
+	  Session.Timeout= 20
+	  session.lcid=1033 
+End Sub
+
+Sub Session_OnEnd
+    Application("CompteurUsers")    = Application("CompteurUsers") - 1
+    Session.Abandon
+End Sub
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBScript RUNAT=Server>
+Sub Application_OnStart		
+    Application("ROOT_PATH") = "/aspweb/"
+	  Application("URL_WEBSITE") = "www.test.com/"
+    Application("CompteurUsers") = 0   
+End Sub
+</SCRIPT>
+
